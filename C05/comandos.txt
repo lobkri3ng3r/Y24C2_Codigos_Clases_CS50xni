@@ -1,0 +1,10 @@
+pwd = Mostrar el directorio actual
+mv = mover un archivo
+cp = copiar un archivo
+cd = cambiar de directorio
+rm = eliminar un archivo
+rm -r = eliminar muchos archivos o eliminar un directorio
+make = compilar un archivo C
+./ = ejecutar un archivo
+ls = listar archivos
+tree = Mostrar el árbol de directorios
