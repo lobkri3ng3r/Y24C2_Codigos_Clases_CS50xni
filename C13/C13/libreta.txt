@@ -1,0 +1,7 @@
+mike,45
+carles,754
+abril,0
+jason,40
+jose,60
+12,54
+ss,4
