@@ -5,13 +5,13 @@
 typedef struct nodo
 {
     int valor;
-    struct node *sig;
+    struct nodo *sig;
 
 }Lista;
 
-void insertar(Lista *cabeza, int numero);
-void imprimir(Lista cabeza);
-void borrar(Lista cabeza);
+void insertar(Lista **cabeza, int numero);
+void imprimir(Lista *cabeza);
+void borrar(Lista *cabeza);
 
 
 int main()
@@ -25,23 +25,23 @@ int main()
 
     while(numero != -1)
     {
-        insertar(cabeza,numero);
+        insertar(&cabeza,numero);
         printf("Ingresado correctamente \n");
         printf("Ingresa elementos, -1 para terminar: ");
         scanf("%d",&numero);
     }
 
     printf("\n Imprimiendo lista ingresada: ");
-    imprimir(&cabeza);
+    imprimir(cabeza);
 
     printf("\n Borrando lista ... \n");
-    borrar(&cabeza);
+    borrar(cabeza);
 
 
 
 }
 
-void insertar(Lista cabeza, int numero)
+void insertar(Lista **cabeza, int numero)
 {
     // creamos un nuevo nodo
     Lista *nuevo;
@@ -53,13 +53,13 @@ void insertar(Lista cabeza, int numero)
     nuevo -> valor = numero;
 
     // Le asignamos el siguiente valor de cabeza
-    nuevo -> sig = cabeza;
+    nuevo -> sig = *cabeza;
 
     // Cabeza pasa a ser el ultimo nodo agregado
     *cabeza = nuevo;
 }
 
-void imprimir(Lista cabeza)
+void imprimir(Lista *cabeza)
 {
     while(cabeza != NULL)
     {
@@ -71,18 +71,18 @@ void imprimir(Lista cabeza)
     }
 }
 
-void borrar(Lista cabeza)
+void borrar(Lista *cabeza)
 {
-    // puntero auxiliar para eliminar correctamente la lisat
+    // puntero auxiliar para eliminar correctamente la lista
     Lista *actual;
 
-    while(*cabeza != NULL)
+    while(cabeza != NULL)
     {
         // Actual toma el valor de cabeza
-        actual = *cabeza;
+        actual = cabeza;
 
         // Cabeza avanza 1 posicion en la lista
-        *cabeza = *cabeza -> sig;
+        cabeza = cabeza -> sig;
 
         // Se libera la memoria de la posicion actual
         free(actual);
