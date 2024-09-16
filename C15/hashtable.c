@@ -28,7 +28,7 @@ int main()
                 "1. -----> Insertar\n"
                 "2. -----> Mostrar\n"
                 "3. -----> Salir\n");
-2        opc = get_int("Escoger opcion: ");
+        opc = get_int("Escoger opcion: ");
         if (opc == 1)
         {
             string palabra = get_string("Ingresar palabra: ");
