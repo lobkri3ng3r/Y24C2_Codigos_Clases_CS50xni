@@ -1,30 +1,32 @@
-from sys import argv,exit
+from sys import argv, exit
 
 if len(argv) >= 5:
-    print("Cantidad de argumentos valida")
+    print("HAY 5 ARGUMENTOS")
 else:
-    print("Faltan argumentos")
-    
-candidatos = {}
-    
-for elementos in argv[1:]:
-    # print(elementos)
-    candidatos[elementos] = 0
+    print("No hay muchos argumentos")
+    exit(1)
+
+candidatos = []
+
+for i in argv[1:]:
+    candidatos.append(i)
 
 print(candidatos)
 
-while True:
-    voto = input("Ingresa el nombre del candidato que vas a votar:")
-    
-    if voto in argv:
-        print("Voto aceptado")
-        candidatos[voto] += 1
-    else:
-        print("No existe ese candidato")
-    
-    
-    respuesta = int(input("Continuar --> 1.si || 2.no"))
-    if respuesta == 2:
-        print(candidatos)
-        print("Fin del programa")
-        exit(0)
+votaciones = {}
+
+for c in candidatos:
+    votaciones[c] = 0
+
+print(votaciones)
+
+valor = input("Por quien deseas votar: ")
+
+if valor in candidatos:
+    votaciones[valor] += 1
+    print(votaciones)
+    exit(0)
+else:
+    print("Ese candidato no existe")
+    exit(1)
+
