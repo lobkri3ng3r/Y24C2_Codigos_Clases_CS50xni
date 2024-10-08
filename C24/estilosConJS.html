@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pagina colorida</title>
+  </head>
+  <body>
+    <form>
+      <input id="color" placeholder="#101010" type="text" />
+      <input type="submit" />
+    </form>
+
+    <div>
+      <button id="red">R</button>
+      <button id="green">G</button>
+      <button id="blue">B</button>
+    </div>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        let inputHEX = document.getElementById("color");
+        document.querySelector("body").style.backgroundColor = inputHEX.value;
+        inputHEX.value = "";
+      });
+      document.getElementById("red").addEventListener("click", function () {
+        document.querySelector("body").style.backgroundColor = "red";
+      });
+
+      document.getElementById("green").addEventListener("click", function () {
+        document.querySelector("body").style.backgroundColor = "green";
+      });
+
+      document.getElementById("blue").addEventListener("click", function () {
+        document.querySelector("body").style.backgroundColor = "blue";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetInterval y SetTimeout</title>
+  </head>
+  <body>
+    <p>
+      La pagina deberia cambiar de color cada 500 milisegundos, gracias a
+      setInterval
+    </p>
+    <script>
+      const colors = ["red", "green", "blue"];
+      let i = 0;
+
+      setInterval(function () {
+        if (i > 2) {
+          i = 0;
+        }
+
+        document.querySelector("body").style.backgroundColor = colors[i];
+        i++;
+      }, 500);
+
+      setTimeout(function () {
+        alert("Este mensaje aparecio 5000 milisegundos despues de cargar la pagina gracias a setTimeout")
+      }, 5000)
+    </script>
+  </body>
+</html>
