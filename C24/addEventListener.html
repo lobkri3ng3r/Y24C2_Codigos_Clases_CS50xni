@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddEventListener</title>
+</head>
+<body>
+    <form>
+        <input type="text">
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        // podemos crear eventos con codigo directamente usando el metodo addEventListener
+        // el primer parametro seria el tipo de evento que ejecutaria la logica de la
+        // funcion que pasemos como segundo parametro, que esta misma puede recibir
+        // como argumento una variable de evento (contiene informacion del evento)
+        document.querySelector("form").addEventListener("submit", function (e) { // funcion anonima
+            e.preventDefault() // previene que la pagina se actualice como lo haria por defecto un evento de tipo submit
+            let texto = document.querySelector("input").value
+            alert(texto)
+        })
+
+        // nosotros podriamos pasar funciones declaradas en nuestro codigo como segundo parametro
+        // pero tambien podemos hacer uso de funciones anonimas
+        // estas son funciones las cuales no tienen identificador o nombre
+        // y solamente sirven para llamarse en donde fueron instanciadas
+        // (un pequeño dato: podemos guardar funciones anonimas en variables)
+        // (otro pequeño dato: las funciones que son un parametro de otra funcion
+        // asi como el ejemplo de addEventListener son llamadas callback)
+    </script>
+</body>
+</html>
