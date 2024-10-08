@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener elementos</title>
+</head>
+<body>
+    <!-- JavaScript es un lenguaje que nos permite manipular elementos HTML y crear paginas dinamicas -->
+    <div>Este elemento deberia imprimirse mediante un alert</div>
+    <div id="elementoConId">Este tambien, pero debe ser obtenido mediante su id</div>
+    <!-- Intenta darle click al boton en tu navegador :) -->
+    <button onclick="verElementos()">Ver elementos div</button>
+    <script>
+        // En javascript tenemos un objeto llamado document, con este podemos usar metodos
+        // Para poder obtener y manipular elementos que esten dentro de nuestra estructura HTML
+        function verElementos() {
+            let elemento = document.querySelector("div")
+            alert(elemento.outerHTML)
+            let elemento2 = document.querySelector("#elementoConId")
+            alert(elemento2.outerHTML)
+        }
+        // en este caso, usamos el metodo querySelector para obtener el elemento que coincida con
+        // el nombre de etiqueta o id que le ingresemos como parametro a el metodo
+    </script>
+</body>
+</html>
