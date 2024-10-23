@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+
+{% block title %} formulario {% endblock %}
+
+{% block body %}
+
+<p>{{ frase }}</p>
+
+<ul>
+{% for i in nombres  %}
+    <li>{{i}}</li>
+{% endfor %}
+</ul>
+
+<br>
+
+<form action="/formulario" method="get">
+    <input type="text" name="nombre" placeholder="Ingresa un nombre a buscar">
+    <input type="submit" value="Enviar">
+</form>
+
+{% if entrada in nombres %}
+<h1>{{entrada}}</h1>
+{% else %}
+    <h1>No puedo visualizar eso</h1>
+{% endif %}
+
+
+
+
+{% endblock %}
+

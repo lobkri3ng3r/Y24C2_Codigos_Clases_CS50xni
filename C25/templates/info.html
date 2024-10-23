@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+
+{% block title %} info {% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h2 class="text-center">Tabla de Nombres</h2>
+    <table class="table table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in lista%}
+            <tr><td>{{i}}</td></tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+

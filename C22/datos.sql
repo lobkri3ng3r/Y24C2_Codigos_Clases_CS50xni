@@ -1,0 +1,16 @@
+INSERT INTO Estudiantes (nombre, carrera) VALUES
+('Juan Pérez', 'Ingeniería en Sistemas'),
+('María López', 'Medicina'),
+('Carlos García', 'Arquitectura'),
+('Ana Martínez', 'Derecho'),
+('Luis Rodríguez', 'Psicología'),
+('Laura Hernández', 'Biología'),
+('Diego Torres', 'Contabilidad'),
+('Sofía Díaz', 'Administración de Empresas'),
+('Pedro Jiménez', 'Comunicación'),
+('Isabel Morales', 'Enfermería'),
+('Javier Fernández', 'Física'),
+('Lucía Castro', 'Química'),
+('Ricardo Silva', 'Matemáticas'),
+('Valentina Romero', 'Trabajo Social'),
+('Andrés Vargas', 'Marketing');
