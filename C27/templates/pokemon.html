@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api de Pokemon</title>
+</head>
+<body>
+    <h1>Pokemones</h1>
+
+    <form method="get" id="formulario">
+        <input placeholder="Ingresar pokemon" name="pokemon_name" id="pokemon_name"/>
+        <button type="submit">Click</button>
+    </form>
+
+    <div id="pokemon">
+
+    </div>
+</body>
+<script src="{{ url_for('static', filename='pokemon.js') }}"></script>
+
+</html>
